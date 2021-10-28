@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.cyberark.conjur.api</groupId>
             <artifactId>conjur-java-api</artifactId>
-            <version>3.0.1</version>
+            
 </dependency>
     </dependencies>
     <build>
