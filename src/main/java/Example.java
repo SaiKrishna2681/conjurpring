@@ -51,7 +51,7 @@ public class Example {
 		System.out.println("Helloworld");
 		
 		
-		Conjur conjur = new Conjur();
+		Conjur conjur = new Conjur(conjurSSLContext);
 		String secret = conjur.variables().retrieveSecret("jenkins-app/web_password");
 
         
