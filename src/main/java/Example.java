@@ -31,7 +31,7 @@ public class Example {
         SpringApplication.run(Example.class, args);
         
 	    
-	    	final String conjurTlsCaPath = "/home/ec2-user/conjur-quickstart/conf/policy/conjur.pem";
+	    	final String conjurTlsCaPath = "/home/ec2-user/conjur-quickstart/conf/policy/conjur-myConjurAccount.der";
 		final CertificateFactory cf = CertificateFactory.getInstance("X.509");
 		final FileInputStream certIs = new FileInputStream(conjurTlsCaPath);
 		final Certificate cert = cf.generateCertificate(certIs);
