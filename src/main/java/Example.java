@@ -31,28 +31,28 @@ public class Example {
         SpringApplication.run(Example.class, args);
         
 	    
-	    	final String conjurTlsCaPath = "/home/ec2-user/conjur-quickstart/conf/policy/conjur-myConjurAccount.der";
-		final CertificateFactory cf = CertificateFactory.getInstance("X.509");
-		final FileInputStream certIs = new FileInputStream(conjurTlsCaPath);
-		final Certificate cert = cf.generateCertificate(certIs);
+	    	//final String conjurTlsCaPath = "/home/ec2-user/conjur-quickstart/conf/policy/conjur-myConjurAccount.der";
+		//final CertificateFactory cf = CertificateFactory.getInstance("X.509");
+		//final FileInputStream certIs = new FileInputStream(conjurTlsCaPath);
+		//final Certificate cert = cf.generateCertificate(certIs);
 		
 		
 		
-		final KeyStore ks = KeyStore.getInstance("JKS");
-		ks.load(null);
-		ks.setCertificateEntry("conjurTlsCaPath", cert);
+		//final KeyStore ks = KeyStore.getInstance("JKS");
+		//ks.load(null);
+		//ks.setCertificateEntry("conjurTlsCaPath", cert);
 
-		final TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
-		tmf.init(ks);
+		//final TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
+		//tmf.init(ks);
 
-		SSLContext conjurSSLContext = SSLContext.getInstance("TLS");
-		conjurSSLContext.init(null, tmf.getTrustManagers(), null);
+		//SSLContext conjurSSLContext = SSLContext.getInstance("TLS");
+		//conjurSSLContext.init(null, tmf.getTrustManagers(), null);
 
 		System.out.println("Helloworld");
 		
 		
-		Conjur conjur = new Conjur(conjurSSLContext);
-		String secret = conjur.variables().retrieveSecret("jenkins-app/web_password");
+		Conjur conjur = new Conjur();
+		//String secret = conjur.variables().retrieveSecret("jenkins-app/web_password");
 
         
     }
