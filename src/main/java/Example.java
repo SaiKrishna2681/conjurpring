@@ -52,7 +52,7 @@ public class Example {
 		
 		
 		Conjur conjur = new Conjur();
-		//String secret = conjur.variables().retrieveSecret("jenkins-app/web_password");
+		String secret = conjur.variables().retrieveSecret("jenkins-app/web_password");
 
         
     }
