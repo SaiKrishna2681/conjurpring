@@ -41,7 +41,7 @@ public class Example {
 	    
 	     Class.forName("com.mysql.jdbc.Driver");  
       Connection con=DriverManager.getConnection(  
-      "jdbc:mysql://172.19.0.1:3306/hello_java?useSSL=false","root",pwd);
+      "jdbc:mysql://172.19.0.1:3306/test?useSSL=false","root",pwd);
           
       PreparedStatement pstmt=con.prepareStatement("insert into hello_java.emp values(?,?)"); 
       pstmt.setString(1,"123456");
