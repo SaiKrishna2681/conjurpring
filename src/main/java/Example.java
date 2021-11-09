@@ -48,7 +48,7 @@ public class Example {
           pstmt.setString(2,"Sai Krishna");
 	       //pstmt.setString(3,salary);
       int updates = pstmt.executeUpdate();
-          resp.getWriter().write("No Of records inserted : "+updates);
+          System.out.println("No Of records inserted : "+updates);
         
     }
 
