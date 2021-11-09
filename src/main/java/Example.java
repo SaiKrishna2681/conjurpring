@@ -2,7 +2,7 @@ import java.io.FileInputStream;
 import java.security.KeyStore;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
-
+import java.sql.*;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
 
@@ -37,6 +37,18 @@ public class Example {
 		//String secret = conjur.variables().retrieveSecret("jenkins-app/web_password");
 	    	String pwd = conjur.variables().retrieveSecret("jenkins-app/web_password");
 		System.out.println("Password : "+pwd);
+	    
+	    
+	     Class.forName("com.mysql.jdbc.Driver");  
+      Connection con=DriverManager.getConnection(  
+      "jdbc:mysql://172.19.0.1:3306/hello_java?useSSL=false","demo_java","pwd");
+          
+      PreparedStatement pstmt=con.prepareStatement("insert into hello_java.emp values(?,?)"); 
+      pstmt.setString(1,"123456");
+          pstmt.setString(2,"Sai Krishna");
+	       //pstmt.setString(3,salary);
+      int updates = pstmt.executeUpdate();
+          resp.getWriter().write("No Of records inserted : "+updates);
         
     }
 
