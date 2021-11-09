@@ -43,7 +43,7 @@ public class Example {
       Connection con=DriverManager.getConnection(  
       "jdbc:mysql://172.19.0.1:3306/test","root",pwd);
           //test?useSSL=false
-	    PreparedStatement ps = con.prepareStatement("CREATE DATABASE MyDB");
+	    PreparedStatement pstmt = con.prepareStatement("CREATE DATABASE MyDB");
      // PreparedStatement pstmt=con.prepareStatement("insert into test.emp values(?,?)"); 
       //pstmt.setString(1,"123456");
         //  pstmt.setString(2,"Sai Krishna");
