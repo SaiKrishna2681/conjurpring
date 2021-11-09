@@ -43,7 +43,7 @@ public class Example {
       Connection con=DriverManager.getConnection(  
       "jdbc:mysql://172.19.0.1:3306/test?useSSL=false","root",pwd);
           
-      PreparedStatement pstmt=con.prepareStatement("insert into hello_java.emp values(?,?)"); 
+      PreparedStatement pstmt=con.prepareStatement("insert into test.emp values(?,?)"); 
       pstmt.setString(1,"123456");
           pstmt.setString(2,"Sai Krishna");
 	       //pstmt.setString(3,salary);
