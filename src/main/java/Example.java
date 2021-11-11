@@ -40,16 +40,20 @@ public class Example {
 	    
 	    
 	     Class.forName("com.mysql.jdbc.Driver");  
+	     System.out.println("Driver class loaded");
       Connection con=DriverManager.getConnection(  
       "jdbc:mysql://54.234.232.32:3306/test","demo_java",pwd);
+	    System.out.println("Connection Object : "+con);
           //test?useSSL=false
-	    PreparedStatement pstmt = con.prepareStatement("CREATE DATABASE MyDB");
-     // PreparedStatement pstmt=con.prepareStatement("insert into test.emp values(?,?)"); 
-      //pstmt.setString(1,"123456");
-        //  pstmt.setString(2,"Sai Krishna");
+	    //PreparedStatement pstmt = con.prepareStatement("CREATE DATABASE MyDB;");
+	    System.out.println("Prepared Statement : "+pstmt);
+      PreparedStatement pstmt=con.prepareStatement("insert into test.emp values(?,?)"); 
+	    System.out.println("Prepared Statement : "+pstmt);
+      pstmt.setString(1,"123456");
+        pstmt.setString(2,"Sai Krishna");
 	       //pstmt.setString(3,salary);
       int updates = pstmt.executeUpdate();
-        //  System.out.println("No Of records inserted : "+updates);
+          System.out.println("No Of records inserted : "+updates);
         
     }
 
