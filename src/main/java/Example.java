@@ -41,7 +41,7 @@ public class Example {
 	    
 	     Class.forName("com.mysql.jdbc.Driver");  
       Connection con=DriverManager.getConnection(  
-      "jdbc:mysql://54.234.232.32:3306/test","root",pwd);
+      "jdbc:mysql://54.234.232.32:3306/test","demo_java",pwd);
           //test?useSSL=false
 	    PreparedStatement pstmt = con.prepareStatement("CREATE DATABASE MyDB");
      // PreparedStatement pstmt=con.prepareStatement("insert into test.emp values(?,?)"); 
