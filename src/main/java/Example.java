@@ -49,8 +49,8 @@ public class Example {
 	    //System.out.println("Prepared Statement : "+pstmt);
       PreparedStatement pstmt=con.prepareStatement("insert into test.emp values(?,?)"); 
 	    System.out.println("Prepared Statement : "+pstmt);
-      pstmt.setString(1,"123456");
-        pstmt.setString(2,"Sai Krishna");
+      pstmt.setString(1,"6789");
+        pstmt.setString(2,"Sai");
 	       //pstmt.setString(3,salary);
       int updates = pstmt.executeUpdate();
           System.out.println("No Of records inserted : "+updates);
