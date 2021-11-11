@@ -46,7 +46,7 @@ public class Example {
 	    System.out.println("Connection Object : "+con);
           //test?useSSL=false
 	    //PreparedStatement pstmt = con.prepareStatement("CREATE DATABASE MyDB;");
-	    System.out.println("Prepared Statement : "+pstmt);
+	    //System.out.println("Prepared Statement : "+pstmt);
       PreparedStatement pstmt=con.prepareStatement("insert into test.emp values(?,?)"); 
 	    System.out.println("Prepared Statement : "+pstmt);
       pstmt.setString(1,"123456");
