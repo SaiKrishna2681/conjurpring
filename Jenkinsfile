@@ -1,6 +1,6 @@
 node {
   stage("Git check out") {
-    git 'https://github.com/SaiKrishna2681/myapp.git'
+    git 'https://github.com/SaiKrishna2681/conjurpring.git'
   }
   stage("build") {
     sh 'chmod 777 build-tools-images.sh'
